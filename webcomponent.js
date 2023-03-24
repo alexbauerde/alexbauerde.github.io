@@ -16,7 +16,18 @@
         controllerName="com.snp.materialselect"
         xmlns:mvc="sap.ui.core.mvc"
         xmlns="sap.m">
-          <Button text="Press me" id="btnTest" press="onButtonPress" />
+        <MultiInput width="70%"
+          showClearIcon="true"
+          tokenUpdate="onTokenUpdateMAT"
+          showValueHelp="true">
+          <core:Item key="02030123" text=02030123" />
+          <core:Item key="02030124" text=02030124" />
+          <core:Item key="02030125" text=02030125" />
+          <core:Item key="02030126" text=02030126" />
+          <core:Item key="02030127" text=02030127" />
+          <core:Item key="02030128" text=02030128" />
+        </MultiInput>
+        <Button text="Test" id="btnTest" press="onButtonPress" />
        </mvc:View>
     </script> 
     `;
@@ -68,17 +79,22 @@
         "use strict";
 
         return Controller.extend("com.snp.materialselect", {
-          onInit: function () {
-            debugger;
-          },
+          onInit: function () {},
 
-          onButtonPress: function (oEvent) {
-            that.dispatchEvent(new CustomEvent("onBtnPressSAC"));
+          onTokenUpdateMAT: function (oEvent) {
+            debugger;
+
+            let aTest = ["02030123", "02030124"];
+
+            that.dispatchEvent(
+              new CustomEvent("onMaterialChange", {
+                aMaterials: aTest,
+              })
+            );
           },
         });
       });
 
-      debugger;
       //### THE APP: place the XMLView somewhere into DOM ###
       var oView = sap.ui.xmlview({
         viewContent: jQuery(_shadowRoot.getElementById(_id + "_oView")).html(),
