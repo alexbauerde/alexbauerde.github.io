@@ -1,7 +1,6 @@
 (function () {
   let _shadowRoot;
   let _id;
-  let _password;
 
   let tmpl = document.createElement("template");
   tmpl.innerHTML = `
@@ -74,8 +73,6 @@
           },
 
           onButtonPress: function (oEvent) {
-            console.log(_password);
-
             that.dispatchEvent(
               new CustomEvent("onBtnPressSAC", {
                 detail: "Test",
