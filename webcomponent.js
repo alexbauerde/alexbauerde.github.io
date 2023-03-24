@@ -73,11 +73,7 @@
           },
 
           onButtonPress: function (oEvent) {
-            that.dispatchEvent(
-              new CustomEvent("onBtnPressSAC", {
-                detail: "Test",
-              })
-            );
+            that.dispatchEvent(new CustomEvent("onBtnPressSAC"));
           },
         });
       });
