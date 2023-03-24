@@ -1,6 +1,7 @@
 (function () {
   let _shadowRoot;
   let _id;
+  let _aSelectedMaterials;
 
   let tmpl = document.createElement("template");
   tmpl.innerHTML = `
@@ -19,8 +20,7 @@
         xmlns="sap.m">
         <MultiComboBox width="70%"
           showClearIcon="true"
-          selectionFinish="onSelectionFinishMAT"
-          showValueHelp="true">
+          selectionFinish="onSelectionFinishMAT">
           <core:Item key="02030123" text="02030123" />
           <core:Item key="02030124" text="02030124" />
           <core:Item key="02030125" text="02030125" />
