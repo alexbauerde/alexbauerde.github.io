@@ -16,7 +16,7 @@
         controllerName="com.snp.materialselect"
         xmlns:mvc="sap.ui.core.mvc"
         xmlns="sap.m">
-          <Button text="Press me" id="btnTest press="onButtonPress" />
+          <Button text="Press me" id="btnTest" press="onButtonPress" />
        </mvc:View>
     </script> 
     `;
