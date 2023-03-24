@@ -15,6 +15,7 @@
       <mvc:View
         controllerName="com.snp.materialselect"
         xmlns:mvc="sap.ui.core.mvc"
+        xmlns:core="sap.ui.core"
         xmlns="sap.m">
         <MultiInput width="70%"
           showClearIcon="true"
