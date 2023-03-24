@@ -79,7 +79,7 @@
 
     set aSelectedMaterials(value) {
       debugger;
-      value = _password;
+      value = _aSelectedMaterials;
       this._export_settings.aSelectedMaterials = value;
     }
   }
