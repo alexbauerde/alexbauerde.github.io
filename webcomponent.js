@@ -15,16 +15,9 @@
     <script id="oView" name="oView" type="sapui5/xmlview">
       <mvc:View
         controllerName="com.snp.materialselect"
-        xmlns:l="sap.ui.layout"
-       xmlns:mvc="sap.ui.core.mvc"
+        xmlns:mvc="sap.ui.core.mvc"
         xmlns="sap.m">
-        <l:VerticalLayout
-        class="sapUiContentPadding"
-        width="100%">
-        <l:content> 
           <Button text="Press me" id="btnTest press="onButtonPress" />
-        </l:content>
-        </l:VerticalLayout>
        </mvc:View>
     </script> 
     `;
