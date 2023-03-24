@@ -20,12 +20,12 @@
           showClearIcon="true"
           tokenUpdate="onTokenUpdateMAT"
           showValueHelp="true">
-          <core:Item key="02030123" text=02030123" />
-          <core:Item key="02030124" text=02030124" />
-          <core:Item key="02030125" text=02030125" />
-          <core:Item key="02030126" text=02030126" />
-          <core:Item key="02030127" text=02030127" />
-          <core:Item key="02030128" text=02030128" />
+          <core:Item key="02030123" text="02030123" />
+          <core:Item key="02030124" text="02030124" />
+          <core:Item key="02030125" text="02030125" />
+          <core:Item key="02030126" text="02030126" />
+          <core:Item key="02030127" text="02030127" />
+          <core:Item key="02030128" text="02030128" />
         </MultiInput>
         <Button text="Test" id="btnTest" press="onButtonPress" />
        </mvc:View>
