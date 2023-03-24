@@ -18,7 +18,7 @@
         xmlns:mvc="sap.ui.core.mvc"
         xmlns:core="sap.ui.core"
         xmlns="sap.m">
-        <MultiComboBox width="70%"
+        <MultiComboBox width="100%"
           showClearIcon="true"
           selectionFinish="onSelectionFinishMAT">
           <core:Item key="02030123" text="02030123" />
@@ -77,7 +77,6 @@
     }
 
     get aSelectedMaterials() {
-      debugger;
       return this._export_settings.aSelectedMaterials;
     }
 
