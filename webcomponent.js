@@ -76,6 +76,12 @@
     get aSelectedMaterials() {
       return this._export_settings.aSelectedMaterials;
     }
+
+    set aSelectedMaterials(value) {
+      debugger;
+      value = _password;
+      this._export_settings.aSelectedMaterials = value;
+    }
   }
 
   customElements.define("com-snp-materialselect", SNPMaterialSelect);
@@ -102,7 +108,8 @@
             debugger;
             let aTest = ["02030123", "02030124"];
 
-            that._firePropertiesChanged(aTest);
+            _aSelectedMaterials = aTest;
+            that._firePropertiesChanged();
 
             // that.dispatchEvent(
             //   new CustomEvent("onSelectionFinishMAT", {
