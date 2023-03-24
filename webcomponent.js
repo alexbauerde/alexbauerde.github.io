@@ -17,9 +17,9 @@
         xmlns:mvc="sap.ui.core.mvc"
         xmlns:core="sap.ui.core"
         xmlns="sap.m">
-        <MultiInput width="70%"
+        <MultiComboBox width="70%"
           showClearIcon="true"
-          tokenUpdate="onTokenUpdateMAT"
+          selectionFinish="onSelectionFinishMAT"
           showValueHelp="true">
           <core:Item key="02030123" text="02030123" />
           <core:Item key="02030124" text="02030124" />
@@ -27,7 +27,7 @@
           <core:Item key="02030126" text="02030126" />
           <core:Item key="02030127" text="02030127" />
           <core:Item key="02030128" text="02030128" />
-        </MultiInput>
+        </MultiComboBox>
         <Button text="Test" id="btnTest" press="onButtonPress" />
        </mvc:View>
     </script> 
@@ -82,13 +82,13 @@
         return Controller.extend("com.snp.materialselect", {
           onInit: function () {},
 
-          onTokenUpdateMAT: function (oEvent) {
+          onSelectionFinishMAT: function (oEvent) {
             debugger;
 
             let aTest = ["02030123", "02030124"];
 
             that.dispatchEvent(
-              new CustomEvent("onMaterialChange", {
+              new CustomEvent("onSelectionFinishMAT", {
                 aMaterials: aTest,
               })
             );
