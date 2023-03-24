@@ -77,11 +77,11 @@
     }
 
     get aSelectedMaterials() {
+      debugger;
       return this._export_settings.aSelectedMaterials;
     }
 
     set aSelectedMaterials(value) {
-      debugger;
       value = _aSelectedMaterials;
       this._export_settings.aSelectedMaterials = value;
     }
@@ -108,17 +108,9 @@
           onInit: function () {},
 
           onSelectionFinishMAT: function (oEvent) {
-            debugger;
-            let aTest = ["02030123", "02030124"];
+            _aSelectedMaterials = oEvent.getParameter("selectedItems").map((oItem) => oItem.getKey());
 
-            _aSelectedMaterials = aTest;
             that._firePropertiesChanged();
-
-            // that.dispatchEvent(
-            //   new CustomEvent("onSelectionFinishMAT", {
-            //     aMaterials: aTest,
-            //   })
-            // );
           },
         });
       });
