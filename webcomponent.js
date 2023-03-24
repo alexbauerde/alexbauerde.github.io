@@ -45,6 +45,9 @@
 
       _shadowRoot.querySelector("#oView").id = _id + "_oView";
 
+      this._export_settings = {};
+      this._export_settings.aSelectedMaterials = [];
+
       this.addEventListener("click", (event) => {
         console.log("click");
       });
