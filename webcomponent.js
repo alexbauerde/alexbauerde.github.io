@@ -28,7 +28,6 @@
           <core:Item key="02030127" text="02030127" />
           <core:Item key="02030128" text="02030128" />
         </MultiComboBox>
-        <Button text="Test" id="btnTest" press="onButtonPress" />
        </mvc:View>
     </script> 
     `;
@@ -60,6 +59,23 @@
     onCustomWidgetAfterUpdate(changedProperties) {
       loadthis(this);
     }
+
+    _firePropertiesChanged() {
+      this.aSelectedMaterials = [];
+      this.dispatchEvent(
+        new CustomEvent("propertiesChanged", {
+          detail: {
+            properties: {
+              aSelectedMaterials: this.aSelectedMaterials,
+            },
+          },
+        })
+      );
+    }
+
+    get aSelectedMaterials() {
+      return this._export_settings.aSelectedMaterials;
+    }
   }
 
   customElements.define("com-snp-materialselect", SNPMaterialSelect);
@@ -84,14 +100,15 @@
 
           onSelectionFinishMAT: function (oEvent) {
             debugger;
-
             let aTest = ["02030123", "02030124"];
 
-            that.dispatchEvent(
-              new CustomEvent("onSelectionFinishMAT", {
-                aMaterials: aTest,
-              })
-            );
+            that._firePropertiesChanged(aTest);
+
+            // that.dispatchEvent(
+            //   new CustomEvent("onSelectionFinishMAT", {
+            //     aMaterials: aTest,
+            //   })
+            // );
           },
         });
       });
