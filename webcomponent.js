@@ -85,10 +85,10 @@
 
       debugger;
       //### THE APP: place the XMLView somewhere into DOM ###
-      var oView = sap.ui.xmlview({
-        viewContent: jQuery(document.getElementById("_oView")).html(),
-      });
-      oView.placeAt(content);
+      // var oView = sap.ui.xmlview({
+      //   viewContent: jQuery(document.getElementById("_oView")).html(),
+      // });
+      // oView.placeAt(content);
 
       if (that_._designMode) {
         //oView.byId("passwordInput").setEnabled(false);
