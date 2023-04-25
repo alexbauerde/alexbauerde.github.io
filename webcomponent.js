@@ -104,7 +104,21 @@
         "use strict";
 
         return Controller.extend("com.snp.materialselect", {
-          onInit: function () {},
+          onInit: function () {
+          
+            // This url has to be dynamic
+            var oModel = new sap.ui.model.odata.v2.ODataModel("https://w7sap69.sap.corp.mann-hummel.com:8443/sap/opu/odata/sap/ZTCM_MATERIAL_SRV/");
+            
+            oModel.read("/MaterialVHSet", {
+              success: function(oData, oResponse) {
+                console.log(oData);
+              },
+              error: function(oError) {
+                console.log(oError);
+              }
+            });
+          
+          },
 
           onSelectionFinishMAT: function (oEvent) {
             _aSelectedMaterials = oEvent.getParameter("selectedItems").map((oItem) => oItem.getKey());
