@@ -1,0 +1,45 @@
+{
+  "name": "SNPMaterialSelect",
+  "description": "SNP Material Select",
+  "eula": "",
+  "vendor": "SNP",
+  "license": "",
+  "id": "com.snp.materialselect",
+  "newInstancePrefix": "SNPMaterialSelect",
+  "version": "0.0.4",
+  "icon": "",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "com-snp-materialselect",
+      "url": "https://alexbauerde.github.io/webcomponent.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+    "aSelectedMaterials": {
+      "type": "string",
+      "description": "selected materials",
+      "default": "[]"
+    },
+    "sODataServiceString": {
+      "type": "string",
+      "description": "String for OData Service",
+      "default": "[]"
+    }
+  },
+  "methods": {
+    "getSelectedMATs": {
+      "returnType": "string",
+      "description": "Get selected materials",
+      "parameters": [],
+      "body": "return this.aSelectedMaterials;"
+    }
+  },
+  "events": {
+    "onSelectionFinishMAT": {
+      "description": "Called when a user selects materials"
+    }
+  }
+}
